@@ -1,5 +1,5 @@
 Name:           gnofract4d
-Version:        3.12
+Version:        3.13
 Release:        %mkrel 1
 Group:          Graphics
 License:        BSD
