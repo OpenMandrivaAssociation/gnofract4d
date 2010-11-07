@@ -1,10 +1,11 @@
 Name:           gnofract4d
 Version:        3.13
-Release:        %mkrel 1
+Release:        %mkrel 2
 Group:          Graphics
 License:        BSD
 Summary:        Gnofract 4D: Superior Fractal Software
 Source:         %{name}-%{version}.tar.gz
+Patch0:		gnofract4d-3.13-fix_desktop_file.patch
 URL:            http://%{name}.sourceforge.net/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -20,22 +21,35 @@ just using a mouse.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 python setup.py build
 
 %install
 %__rm -rf %{buildroot}
-python setup.py install --prefix=%{buildroot}%_prefix --install-lib=%{buildroot}%{_libdir}/python2.6/site-packages
+python setup.py install --root=%{buildroot}
+
+#duplicate docs
+rm -rf %{buildroot}%{_docdir}/%{name}
+
+#fix rights
+chmod 644 %{buildroot}%{_datadir}/%{name}/maps/royal.map
 
 %clean
 %__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%_bindir/%name
-%{_prefix}/share
-%{_libdir}
-
-
-
+%doc COPYING README
+%{_bindir}/%{name}
+%{_datadir}/%{name}
+%{_datadir}/pixmaps/%{name}
+%{_datadir}/pixmaps/%{name}-logo.png
+%{_datadir}/mime/packages/%{name}-mime.xml
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/gnome/help/%{name}
+%{python_sitearch}/fract4d
+%{python_sitearch}/fract4dgui
+%{python_sitearch}/fractutils
+%{python_sitearch}/%{name}-%{version}-py%{py_ver}.egg-info
