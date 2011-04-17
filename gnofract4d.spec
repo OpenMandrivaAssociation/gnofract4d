@@ -6,6 +6,7 @@ License:        BSD
 Summary:        Gnofract 4D: Superior Fractal Software
 Source:         %{name}-%{version}.tar.gz
 Patch0:		gnofract4d-3.13-fix_desktop_file.patch
+Patch1:		gnofract4d-3.13-fix_libdl.patch
 URL:            http://%{name}.sourceforge.net/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -23,6 +24,7 @@ just using a mouse.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p0
 
 %build
 python setup.py build
