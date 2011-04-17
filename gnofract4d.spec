@@ -10,6 +10,7 @@ URL:            http://%{name}.sourceforge.net/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:  python-devel
+BuildRequires:  glibc-devel
 
 %description
 Gnofract 4D is a free, open source program which allows anyone to
