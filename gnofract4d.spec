@@ -1,6 +1,6 @@
 Name:           gnofract4d
-Version:        3.13
-Release:        %mkrel 3
+Version:        3.14
+Release:        %mkrel 1
 Group:          Graphics
 License:        BSD
 Summary:        Gnofract 4D: Superior Fractal Software
