@@ -1,0 +1,11 @@
+--- setup.py	2010-03-28 04:47:10.000000000 +0200
++++ ../../setup.py	2011-04-18 00:04:13.000000000 +0200
+@@ -145,7 +145,7 @@
+     extra_link = [ '/LIBPATH:"F:/Gamma/GTK+/Win32/lib"' ]
+ else:
+     warnings = '-Wall'
+-    libs = [ 'stdc++' ]
++    libs = [ 'stdc++', 'dl' ]
+     osdep = []
+     extra_source = []
+     extra_link = []

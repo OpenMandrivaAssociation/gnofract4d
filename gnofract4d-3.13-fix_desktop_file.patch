@@ -1,0 +1,17 @@
+diff -p -up ./gnofract4d.desktop.orig ./gnofract4d.desktop
+--- ./gnofract4d.desktop.orig	2010-11-07 21:47:30.000000000 +0100
++++ ./gnofract4d.desktop	2010-11-07 21:48:55.000000000 +0100
+@@ -4,10 +4,10 @@ Encoding=UTF-8
+ Name=Gnofract 4D Fractal Generator
+ Comment=Generate fractal images such as the Mandelbrot set
+ Exec=gnofract4d %F
+-Icon=gnofract4d-logo.png
++Icon=gnofract4d-logo
+ Terminal=false
+ Type=Application
+-Categories=GNOME;Graphics;Math;
+-MimeType=text/x-gnofract4d-fractal-parameters
++Categories=GNOME;GTK;Graphics;Math;Science;
++MimeType=text/x-gnofract4d-fractal-parameters;
+ 
+ 
