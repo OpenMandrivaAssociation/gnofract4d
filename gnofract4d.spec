@@ -56,3 +56,32 @@ chmod 644 %{buildroot}%{_datadir}/%{name}/maps/royal.map
 %{python_sitearch}/fract4dgui
 %{python_sitearch}/fractutils
 %{python_sitearch}/%{name}-%{version}-py%{py_ver}.egg-info
+
+
+%changelog
+* Sun Oct 30 2011 Andrey Bondrov <abondrov@mandriva.org> 3.14-1mdv2011.0
++ Revision: 707897
+- New version 3.14
+
+* Mon Apr 18 2011 Olivier Faurax <ofaurax@mandriva.org> 3.13-3
++ Revision: 654809
+- Patch to add libdl
+
+* Sun Nov 07 2010 Jani Välimaa <wally@mandriva.org> 3.13-2mdv2011.0
++ Revision: 594849
+- rebuild for python 2.7
+- fix install
+- fix filelist (don't own /usr/share or /usr/lib{64,})
+- fix file rights
+- fix desktop file
+
+* Sun Sep 19 2010 Olivier Faurax <ofaurax@mandriva.org> 3.13-1mdv2011.0
++ Revision: 579872
+- New version 3.13 (oups)
+- New version 3.13
+
+* Mon Dec 28 2009 Olivier Faurax <ofaurax@mandriva.org> 3.12-1mdv2010.1
++ Revision: 483143
+- import gnofract4d
+
+
