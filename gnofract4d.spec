@@ -7,7 +7,7 @@ Summary:        Gnofract 4D: Superior Fractal Software
 Source:         %{name}-%{version}.tar.gz
 Patch0:		gnofract4d-3.13-fix_desktop_file.patch
 Patch1:		gnofract4d-3.13-fix_libdl.patch
-URL:            http://%{name}.sourceforge.net/
+URL:            https://%{name}.sourceforge.net/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:  python-devel
